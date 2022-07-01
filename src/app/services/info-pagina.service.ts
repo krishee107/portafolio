@@ -18,7 +18,6 @@ export class InfoPaginaService {
    }
 
    private cargarInfo(){
-    console.log('Servicio de infoPagina listo')
 
     //Leer archivo JSON
     this.http.get('assets/data/data-pagina.json')
@@ -29,13 +28,11 @@ export class InfoPaginaService {
    }
 
    private cargarEquipo(){
-    console.log('Servicio de firebase listo')
 
     //Leer archivo JSON Firebase
     this.http.get('https://angular-html-57ecc-default-rtdb.firebaseio.com/equipo.json')
       .subscribe( (resp: any) =>{
         this.equipo = resp;
-        console.log(resp)
       })
 
    }
